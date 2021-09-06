@@ -117,7 +117,8 @@ Activating sample extensions
 
 To activate the optional extensions supported by this sample, modify :makevar:`OVERLAY_CONFIG` in the following manner:
 
-* For the experimental Thread 1.2 variant, set :file:`overlay-thread_1_2.conf`.
+* For the experimental Thread 1.2 FTD variant, set :file:`overlay-thread_1_2_ftd.conf`.
+* For the experimental Thread 1.2 MTD variant, set :file:`overlay-thread_1_2_mtd.conf`.
 * For the minimal single protocol variant, set :file:`overlay-minimal_singleprotocol.conf`.
 * For the minimal multiprotocol variant, set :file:`overlay-minimal_multiprotocol.conf`.
 * For USB transport support, set :file:`overlay-usb.conf`.
@@ -268,6 +269,7 @@ Testing Thread 1.2 features
 To test the Thread 1.2 features, complete the following steps:
 
 #. Make sure both development kits are programmed with the CLI sample with the :ref:`ot_cli_sample_thread_v12` enabled.
+#. Make sure that both devices are programmed with :file:`overlay-thread_1_2_ftd.conf`
 #. Turn on the developments kits.
 #. Set up the serial connection with both development kits.
    For more details, see :ref:`putty`.
@@ -431,8 +433,9 @@ To test the Thread 1.2 features, complete the following steps:
 
 #. Verify the Coordinated Sampled Listening (CSL) functionality.
 
+   The following example requires Both FTD and MTD devices working as leader and child (SSED) devices, respectively.
    The following steps use the address ``fe80:0:0:0:acbd:53bf:1461:a861``.
-   Replace it with the link-local address of your router kit in all commands.
+   Replace it with the link-local address of your SSED device kit in all commands.
 
    a. Send an ICMPv6 Echo Request from the leader kit to link-local address of the router kit:
 
@@ -446,10 +449,11 @@ To test the Thread 1.2 features, complete the following steps:
       Observe that there is a long latency on the reply of up to 3000 ms.
       This is due to the indirect transmission mechanism based on data polling.
 
-   #. Enable a CSL Receiver on the router kit (now SED) by configuring a CSL period of 0.5 seconds:
+   #. Enable a CSL Receiver on the SSED kit by configuring a CSL period of 0.5 seconds:
 
       .. code-block:: console
 
+         uart:~$ ot mode -
          uart:~$ ot csl period 3125
          Done
 

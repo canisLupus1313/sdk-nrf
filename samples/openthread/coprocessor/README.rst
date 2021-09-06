@@ -116,6 +116,7 @@ For more information about using configuration overlay files, see :ref:`zephyr:i
 
 The following configuration files are available:
 
+* :file:`overlay-thread_1_2_ftd.conf` Enables experimental Thread 1.2 extension.
 * :file:`overlay-vendor_hook.conf` - Enables the vendor hooks extension.
   This file enables the vendor hooks feature and specifies the source file to use.
   See :ref:`ot_coprocessor_sample_features_enabling_hooks` for more information.

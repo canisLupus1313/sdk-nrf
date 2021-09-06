@@ -63,16 +63,19 @@ Complete the following steps to prepare for the certification tests:
 
 #. Build the certification image.
 
-   The :ref:`ot_cli_sample` sample is used as a base, modified with the :file:`harness/overlay-cert.conf` overlay file.
+   The :ref:`ot_cli_sample` sample is used as a base, modified with the following overlay and configuration files:
+   * :file:`prj_cert.conf`
+   * :file:`overlay-ble.conf`
 
    .. code-block::
 
          cd ncs/nrf/samples/openthread/cli/
-         west build -b nrf52840dk_nrf52840 -- -DOVERLAY_CONFIG=harness/overlay-cert.conf -DCONFIG_OPENTHREAD_LIBRARY_1_1=y
+         west build -b nrf52840dk_nrf52840 -- -DOVERLAY_CONFIG="overlay-ble.conf" -DCONFIG_OPENTHREAD_LIBRARY_1_1=y -DCONF_FILE=prj_cert.conf
 
    .. note::
       The configuration option selects the precompiled OpenThread libraries.
-      The overlay file enables :ref:`multiprotocol support <ug_multiprotocol_support>` with Bluetooth® LE advertising.
+      The project conf :file:`prj_cert.conf` enables thread harness compatibility.
+      The overlay :file:`overlay-ble.conf` enables :ref:`multiprotocol support <ug_multiprotocol_support>` with Bluetooth® LE advertising.
 
 #. Prepare Thread Test Harness.
 

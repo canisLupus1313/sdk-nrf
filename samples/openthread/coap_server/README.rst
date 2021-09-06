@@ -101,6 +101,11 @@ For complete CLI documentation, refer to `OpenThread CLI Reference`_.
     In Zephyr shell, every OpenThread command needs to be preceded with the `ot` keyword.
     For example, ``ot channel 20``.
 
+Testing Thread 1.2 features
+---------------------------
+
+For examples of Thread 1.2 please refer to :ref:`ot_cli_sample`.
+
 Dependencies
 ************
 
