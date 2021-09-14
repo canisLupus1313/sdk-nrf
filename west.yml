@@ -35,6 +35,8 @@ manifest:
       url-base: https://github.com/PelionIoT
     - name: memfault
       url-base: https://github.com/memfault
+    - name: jciupis
+      url-base: https://github.com/jciupis
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -104,7 +106,8 @@ manifest:
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
-      revision: dafac2911f8ca8ee05519d3ed3f9c4a6e0dc46e1
+      remote: jciupis
+      revision: pr/KRKNWK-11279-fix-802154-ed-assert
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tfm
