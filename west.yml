@@ -37,6 +37,8 @@ manifest:
       url-base: https://github.com/memfault
     - name: jciupis
       url-base: https://github.com/jciupis
+    - name: canis
+      url-base: https://github.com/canisLupus1313
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -106,7 +108,7 @@ manifest:
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
-      remote: jciupis
+      remote: canis
       revision: pr/KRKNWK-11279-fix-802154-ed-assert
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
