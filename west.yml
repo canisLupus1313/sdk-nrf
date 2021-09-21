@@ -35,6 +35,8 @@ manifest:
       url-base: https://github.com/PelionIoT
     - name: memfault
       url-base: https://github.com/memfault
+    - name: canis
+      url-base: https://github.com/canisLupus1313
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -54,7 +56,6 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
       repo-path: sdk-zephyr
-      revision: f19ebe4b50405b2eb174199b3635f24d741c9bf4
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
@@ -134,9 +135,10 @@ manifest:
       path: modules/lib/cjson
       revision: 50bddddf7fb45e4ce87bc3619df06db55d181856
     - name: openthread
+      remote: canis
       repo-path: sdk-openthread
       path: modules/lib/openthread
-      revision: 6e2ab99d68f5cd4c6ad5d728b7c7baadfcd22429
+      revision: ncs_stress
     # Other third-party repositories.
     - name: cmock
       path: test/cmock
