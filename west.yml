@@ -37,6 +37,8 @@ manifest:
       url-base: https://github.com/memfault
     - name: canis
       url-base: https://github.com/canisLupus1313
+    - name: pkwiek
+      url-base: https://github.com/pkwiek
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -129,7 +131,8 @@ manifest:
     - name: nrf-802154
       repo-path: sdk-nrf-802154
       path: nrf-802154
-      revision: e3831e5ac1c753d8cf1b79dd448fc8b9e2e86b9b
+      remote: pkwiek
+      revision: temphack/fix-rsch-assert-delayed-hfclk-ready
       groups:
       - nrf-802154
     - name: cjson

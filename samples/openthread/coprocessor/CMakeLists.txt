@@ -16,4 +16,5 @@ project(openthread_coprocessor)
 
 # NORDIC SDK APP START
 target_sources(app PRIVATE src/main.c src/nrf_802154_radio_wrapper.c)
+zephyr_compile_definitions(NRF_802154_SL_ENABLE_DEBUG_LOG=1)
 # NORDIC SDK APP END
