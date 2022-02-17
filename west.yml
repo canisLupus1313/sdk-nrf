@@ -173,9 +173,10 @@ manifest:
       revision: 0.28.2
       remote: memfault
     - name: openthread
-      repo-path: sdk-openthread
+      remote: canis
+      repo-path: openthread
       path: modules/lib/openthread
-      revision: 02e61a2edd80417e9b8f9a5f4c1b2dad4ac486b4
+      revision: debug_linkmetrics
 
   # West-related configuration for the nrf repository.
   self:
