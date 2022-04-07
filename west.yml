@@ -33,6 +33,8 @@ manifest:
       url-base: https://github.com/NordicSemiconductor
     - name: memfault
       url-base: https://github.com/memfault
+    - name: canis
+      url-base: https://github.com/canisLupus1313
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -86,7 +88,6 @@ manifest:
           - net-tools
           - nrf_hw_models
           - open-amp
-          - openthread
           - psa-arch-tests
           - segger
           - tinycbor
@@ -170,6 +171,10 @@ manifest:
       path: modules/lib/memfault-firmware-sdk
       revision: 0.29.1
       remote: memfault
+    - name: openthread
+      revision: spinel_timeout_extend
+      path: modules/lib/openthread
+      remote: canis
 
   # West-related configuration for the nrf repository.
   self:
