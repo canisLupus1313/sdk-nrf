@@ -31,6 +31,8 @@ manifest:
       url-base: https://github.com/NordicSemiconductor
     - name: memfault
       url-base: https://github.com/memfault
+    - name: canis
+      url-base: https://github.com/canisLupus1313
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -50,7 +52,8 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
       repo-path: sdk-zephyr
-      revision: b341c1ffbee9e1694f07a62f55b76b3f4947f603
+      remote: canis
+      revision: socket_offloading
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
