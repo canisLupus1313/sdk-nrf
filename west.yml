@@ -33,7 +33,8 @@ manifest:
       url-base: https://github.com/memfault
     - name: ant-nrfconnect
       url-base: https://github.com/ant-nrfconnect
-
+    - name: nordic-bitbucket
+      url-base: https://projecttools.nordicsemi.no/bitbucket/scm/~prbi
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
   defaults:
@@ -112,9 +113,10 @@ manifest:
       repo-path: sdk-mbedtls
       revision: v3.1.0-ncs3
     - name: nrfxlib
-      repo-path: sdk-nrfxlib
+      repo-path: nrfxlib-bump-openthreadlibs
       path: nrfxlib
-      revision: v2.3.0
+      remote: nordic-bitbucket
+      revision: b1992806e5dfb0ac64b284cf0f26415e75de9991
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tf-m/trusted-firmware-m
@@ -171,9 +173,10 @@ manifest:
       path: modules/hal/cirrus-logic
       revision: 9f6b3812237fbb0d4157ba3584c13f1644fcbe3a
     - name: openthread
-      repo-path: sdk-openthread
+      repo-path: openthread-libs-bump
       path: modules/lib/openthread
-      revision: 2060039bbfec52ac00f22a7cc3213c2ab1df138e
+      revision: 4750e399b390867d6d08e647b40019ce42c481b2
+      remote: nordic-bitbucket
     - name: ant
       repo-path: sdk-ant
       revision: 7df46a12ace258473c1f2b3b98de690b5799ac64
