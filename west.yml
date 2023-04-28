@@ -31,6 +31,8 @@ manifest:
       url-base: https://github.com/NordicSemiconductor
     - name: memfault
       url-base: https://github.com/memfault
+    - name: nordic-bitbucket
+      url-base: https://projecttools.nordicsemi.no/bitbucket/scm/~prbi
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -106,9 +108,10 @@ manifest:
       repo-path: sdk-mbedtls
       revision: v3.0.0-ncs2
     - name: nrfxlib
-      repo-path: sdk-nrfxlib
+      repo-path: nrfxlib-bump-openthreadlibs
+      remote: nordic-bitbucket
       path: nrfxlib
-      revision: v2.0.2
+      revision: bd7a1b71945b580617fa78516808cd39122cbdc4
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tf-m/trusted-firmware-m
@@ -177,9 +180,10 @@ manifest:
       groups:
       - nrf5340_audio
     - name: openthread
-      repo-path: sdk-openthread
+      repo-path: openthread-libs-bump
+      remote: nordic-bitbucket
       path: modules/lib/openthread
-      revision: aacd9eb0ba0d45483613370d8b7924fe3fa71606
+      revision: 33d78c1767a6f197f6472dcd9081ee731f1f3de8
 
   # West-related configuration for the nrf repository.
   self:
