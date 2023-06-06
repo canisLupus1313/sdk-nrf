@@ -37,6 +37,8 @@ manifest:
       url-base: https://github.com/ant-nrfconnect
     - name: babblesim
       url-base: https://github.com/BabbleSim
+    - name: nordic-bitbucket
+      url-base: https://projecttools.nordicsemi.no/bitbucket/scm/~prbi
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -59,7 +61,8 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
       repo-path: sdk-zephyr
-      revision: v3.3.99-ncs1
+      revision: 9b82e8458a3a9e13d9e869b245730841e47c8702
+      remote: nordic-bitbucket
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
@@ -129,9 +132,10 @@ manifest:
       repo-path: sdk-mbedtls
       revision: v3.3.0-ncs1
     - name: nrfxlib
-      repo-path: sdk-nrfxlib
+      repo-path: nrfxlib-bump-openthreadlibs
+      remote: nordic-bitbucket
       path: nrfxlib
-      revision: v2.4.0
+      revision: 32b18617131a1fbb6343ce9a5f2396b0d1a1b52a
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tf-m/trusted-firmware-m
@@ -206,13 +210,14 @@ manifest:
           upstream-sha: 1be6ca7253133a21a1e9fe0fbb4656e17d63a936
           compare-by-default: false
     - name: openthread
-      repo-path: sdk-openthread
+      repo-path: openthread-libs-bump
+      remote: nordic-bitbucket
       path: modules/lib/openthread
-      revision: d9abe3071c0131a4adb5d7e7451319b735e6d855
+      revision: d8c89d297b41019962ad2ecae094a33cd566cc93
       userdata:
         ncs:
           upstream-url: https://github.com/openthread/openthread
-          upstream-sha: d9abe3071c0131a4adb5d7e7451319b735e6d855
+          upstream-sha: d56059e022495caee31ac83136f76108603ba1b6
           compare-by-default: false
 
     # Other third-party repositories.
