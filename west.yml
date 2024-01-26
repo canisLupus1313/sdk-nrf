@@ -39,6 +39,8 @@ manifest:
       url-base: https://github.com/BabbleSim
     - name: bosch
       url-base: https://github.com/boschsensortec
+    - name: canis
+      url-base: https://github.com/canisLupus1313
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -61,7 +63,8 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
       repo-path: sdk-zephyr
-      revision: b3c97b010983e5523d90f9140b8e657b06a2ea3f
+      remote: canis
+      revision: bbtc_advertisement
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
@@ -224,9 +227,10 @@ manifest:
           upstream-sha: 1be6ca7253133a21a1e9fe0fbb4656e17d63a936
           compare-by-default: false
     - name: openthread
-      repo-path: sdk-openthread
+      repo-path: openthread
       path: modules/lib/openthread
-      revision: ab28127a2a9e7b7212e1bd943d3f55a4d9db5f4a
+      remote: canis
+      revision: bbtc_advertisement
       userdata:
         ncs:
           upstream-url: https://github.com/openthread/openthread
